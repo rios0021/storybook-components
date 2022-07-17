@@ -21,6 +21,10 @@ interface Props {
    * Custom color from hex value
    */
     fontColor?: string;
+    /**
+   * Custom color for background
+   */
+    backgroundColor?: string;
 }
 
 
@@ -29,11 +33,12 @@ export const MyLabel = ({
         size = 'normal',
         allCaps = false,
         color = 'primary',
-        fontColor 
+        fontColor,
+        backgroundColor = 'transparent'
     }: Props) => {
     return (
         <span 
-        style={{ color: fontColor}}
+        style={{ color: fontColor, backgroundColor}}
         className={`label ${size} text-${color}`}
         >
             {
